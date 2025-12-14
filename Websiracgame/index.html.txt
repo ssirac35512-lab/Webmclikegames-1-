@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Voxel Oyunu</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; }
+        canvas { display: block; }
+        
+        /* Kontrol Talimatları için Stil */
+        #instructions {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        #instructions-text {
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        #instructions-text h1 {
+            color: #4CAF50; /* Yeşil */
+        }
+        
+        .controls-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .controls-list li {
+            margin: 5px 0;
+        }
+
+        .key-highlight {
+            font-weight: bold;
+            color: #FFEB3B; /* Sarı */
+            padding: 2px 5px;
+            background-color: #333;
+            border-radius: 3px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="instructions">
+        <div id="instructions-text">
+            <h1>VOXEL OYUNUNA BAŞLA</h1>
+            <p>Devam etmek için ekrana **Tıklayın**</p>
+            <ul class="controls-list">
+                <li><span class="key-highlight">W, A, S, D</span>: Hareket</li>
+                <li><span class="key-highlight">Space</span>: Zıplama</li>
+                <li><span class="key-highlight">Sol Tık</span>: Blok Kır</li>
+                <li><span class="key-highlight">Sağ Tık</span>: Blok Koy</li>
+                <li><span class="key-highlight">1, 2, 3</span>: Blok Seç</li>
+                <li><span class="key-highlight">Esc</span>: Kontrolü Bırak</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script type="module" src="./main.js"></script>
+
+</body>
+</html>
